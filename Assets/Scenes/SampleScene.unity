@@ -214,6 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550092192}
   - component: {fileID: 550092191}
+  - component: {fileID: 550092193}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550092190}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a27d7223499467246b3ef3a9efbd9b39, type: 3}
   m_Name: 
@@ -268,6 +269,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &550092193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550092190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a8ffbd0153e614790b6a578a694dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassLeft: {fileID: 11400000, guid: 3e11699bd04d42448857251e6a3255a2, type: 2}
+  grassMiddle: {fileID: 11400000, guid: d494ec81e193c2944b92559f207ba8f6, type: 2}
+  grassRight: {fileID: 11400000, guid: 24fd608606641964d8fb4ea4f7dfcdaa, type: 2}
+  grassSlopeLeft: {fileID: 11400000, guid: 1598553fc92a00749bcb181d28b0ac40, type: 2}
+  grassSlopeRight: {fileID: 11400000, guid: afef37acf31b19544a8202dbbbe2ad93, type: 2}
+  dirtMiddleLeft: {fileID: 11400000, guid: 65b13ff02ad07d7448ec08fba70ad942, type: 2}
+  dirtMiddleRight: {fileID: 11400000, guid: 1c6f1e5d1b852014fa6297b26c9e4fd9, type: 2}
+  dirtCenter: {fileID: 11400000, guid: c465cb1b62857ca498dd8485d88e3542, type: 2}
+  dirtBottomLeft: {fileID: 11400000, guid: 70db1007a4a170644b33085f2961ff58, type: 2}
+  dirtBottomRight: {fileID: 11400000, guid: 54d07009bf5f6f14998226d85dae4437, type: 2}
+  dirtBottomMiddle: {fileID: 11400000, guid: 75c9e03ed1554e24094e3e38f0da9d7e, type: 2}
+  dirtBottomLeftCorner: {fileID: 11400000, guid: e93b09c9c56ac764da54ea52f0af0580,
+    type: 2}
+  dirtBottomRightCorner: {fileID: 11400000, guid: 0243deddf71b3c148a98e824bc9d9418,
+    type: 2}
+  dirtTopLeftCorner: {fileID: 11400000, guid: d5cb4af16c94c3c438bcebe1ce3c5466, type: 2}
+  dirtTopRightCorner: {fileID: 11400000, guid: 5eee49f45dd32564e9d4bef073d0aae7, type: 2}
+  error: {fileID: 11400000, guid: bae55be4131c18b499a195cae487ef1a, type: 2}
+  testDungeon: {fileID: 11400000, guid: cc7e0afcbcbeffd4388d02bfb2f73e18, type: 2}
+  player: {fileID: 7548578059845589376, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b, type: 3}
+  width: 200
+  height: 100
+  tilemap: {fileID: 1144733210}
+  seed: 
+  useRandomSeed: 1
+  randomFillPercent: 48
+  smoothingTarget: 200
+  wallCountModifier: 5
+  spawnDungeonOnePercentage: 3
 --- !u!1 &954231653
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,72 +916,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949728593}
   m_CullTransparentMesh: 0
---- !u!1001 &2086046236948778941
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 31.632954
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 64.95791
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999969
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.002500498
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099707, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 360.287
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086046238594099708, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b,
-        type: 3}
-      propertyPath: m_Name
-      value: gon (player)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4c73b2ef8fd9fc64295c78f4bf41b85b, type: 3}
